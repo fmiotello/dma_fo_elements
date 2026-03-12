@@ -1,19 +1,6 @@
 function plotArrayGeometry(r_m, psi_m, q_m, theta_m, theta, max_rad)
 figure('Color','w');
-pax = polaraxes; hold(pax,'on');
-
-% Configure axes appearance
-pax.FontName = 'Times New Roman';
-pax.FontSize = 12;
-pax.RColor = 'k';
-pax.ThetaColor = 'k';
-
-% Define theta ticks
-pax.ThetaTick = 0:30:330;
-
-labels = arrayfun(@(x) sprintf('$%d^\\circ$', x), pax.ThetaTick, 'UniformOutput', false);
-pax.ThetaTickLabels = labels;
-pax.TickLabelInterpreter = 'latex';
+pax = createPolarAxes(gcf, []);
 
 % Plot array geometry elements
 for ll = 1:numel(r_m)

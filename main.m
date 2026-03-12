@@ -1,9 +1,9 @@
 %% main.m
 
 clear; clc; close all;
-addpath("utils");         
-addpath("beamforming");   
-addpath("plotting");  
+addpath("utils");
+addpath("beamforming");
+addpath("plotting");
 addpath("ideal_beampatterns")
 
 %% Parameters
@@ -13,7 +13,7 @@ freq = 50:50:4000;                         % Frequencies [Hz]
 omega = 2*pi*freq;
 theta = deg2rad(-180:180);                 % Angles [rad]
 
-db_limit = -50;                            % dB dynamic range
+db_limit = -50;                            % dB plot limit
 plot_freq_idx = 20;                        % Frequency idx to plot
 
 % Array geometry
@@ -25,13 +25,14 @@ q_m = rand(M,1); theta_m = 2*pi*rand(M,1) - pi;
 
 % Desired beampattern
 N = 1; shape = 'supercardioid'; theta_s = deg2rad(60);
-[an, b2n] = idealBPcoefficients(shape, N, 'harmonic_series');
+[~, b2n] = idealBPcoefficients(shape, N, 'harmonic_series');
 
 % Design beamformer weights
 h = designBeamformer(r_m, psi_m, q_m, theta_m, omega, c, N, b2n, theta_s);
 
 % Compute beampattern metrics
-[BP, WNG, DF] = computeMetrics(h, r_m, psi_m, q_m, theta_m, omega, c, theta, theta_s);
+[BP, WNG, DF] = computeMetrics(h, r_m, psi_m, q_m, theta_m, omega, c, ...
+    theta, theta_s);
 
 % Plotting
 plotArrayGeometry(r_m, psi_m, q_m, theta_m, theta, max_rad);

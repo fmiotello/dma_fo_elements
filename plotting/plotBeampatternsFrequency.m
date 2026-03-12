@@ -1,10 +1,7 @@
 function plotBeampatternsFrequency(BP, b2n, N, theta_s, theta, freq, db_limit)
 
 % target beampattern in dB and normalize
-indices = N:-1:-N;
-Upsilon = diag(exp(1j*indices*theta_s));
-p = exp(1j*(-indices')*theta);
-target_BP = b2n' * Upsilon * p;
+target_BP = computeTargetBeampattern(b2n, N, theta_s, theta);
 target_BP_db = max(20*log10(abs(target_BP)), db_limit);
 min_tdb = min(target_BP_db, [], 'all');
 max_tdb = max(target_BP_db, [], 'all');
