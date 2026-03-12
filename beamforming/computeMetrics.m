@@ -1,5 +1,6 @@
 function [BP, WNG, DF] = computeMetrics(h, r_m, psi_m, q_m, theta_m, omega, c, theta, theta_s)
-%computeMetrics  Evaluate beampattern, WNG, and directivity factor
+%computeMetrics Evaluate the beampattern, WNG, and directivity factor
+
 nfreq = numel(omega);
 ntheta = numel(theta);
 BP  = zeros(nfreq, ntheta);

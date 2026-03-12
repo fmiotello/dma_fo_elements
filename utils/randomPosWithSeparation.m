@@ -1,9 +1,7 @@
 function [r_m, psi_m] = randomPosWithSeparation(M, max_rad, min_sep)
-%randomPosWithSeparation Sample points in a disk with a minimum spacing.
+%randomPosWithSeparation Generate random positions in a circular area with a minimum spacing
 %
-% The routine uses rejection sampling: candidate points are drawn uniformly
-% in the disk until M valid positions are accepted or the trial budget is
-% exhausted.
+% The routine uses rejection sampling: candidate points are drawn uniformly in the circular area until M valid positions are accepted or the trial budget is exhausted.
 
 points = zeros(M, 2);
 count = 0;

@@ -1,4 +1,6 @@
 function plotArrayGeometry(r_m, psi_m, q_m, theta_m, theta, max_rad)
+%plotArrayGeometry Plot the array geometry and element directivities
+
 figure('Color','w');
 pax = createPolarAxes(gcf, []);
 

@@ -1,5 +1,6 @@
 function Xi = buildModeMatrix(x, psi_m, theta_m, q_m, N)
-%buildModeMatrix  Assemble modal response matrix Xi
+%buildModeMatrix Assemble the modal response matrix
+
 M = numel(q_m);
 Xi = zeros(2*N + 1, M);
 varphi_m = theta_m - psi_m;

@@ -1,13 +1,5 @@
 function [r_m, psi_m] = linearPos(M, d)
-% Generates a symmetric linear array geometry (along x-axis).
-% 
-% INPUTS:
-%   M - number of elements
-%   d - inter-element spacing
-%
-% OUTPUTS:
-%   r_m   - radial coordinates of elements
-%   psi_m - angular coordinates of elements (in radians)
+%linearPos Generate a symmetric linear array along the x-axis
 
     % Element indices centered around zero
     if mod(M,2) == 0

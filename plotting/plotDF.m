@@ -1,4 +1,6 @@
 function plotDF(freq, DF)
+%plotDF Plot the directivity factor over frequency
+
 figure('Color','w');
 plot(freq/1e3, 10*log10(DF),'LineWidth',1.5);
 ylabel('$\mathcal{D}$ [dB]', 'Interpreter','latex', 'FontSize', 14);

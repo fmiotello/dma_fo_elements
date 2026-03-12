@@ -1,7 +1,5 @@
 function [a_N] = hypercardioidCoefficients(N)
-%% hypercardioidCoeffs(N) computes the N+1 coefficients of a Nth order
-% hypercardioid. Hypercardioid pattern is here defined as the pattern which
-% maximizes the Directivity factor (assuming cylindrically isotropic noise field)
+%hypercardioidCoefficients Compute the coefficients of an Nth-order hypercardioid.
         
 %Compute a_nN Coefficients-------------------------------------------------
         ns=0:N;

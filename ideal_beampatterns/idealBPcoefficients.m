@@ -1,9 +1,5 @@
 function [a_N, b_2N] = idealBPcoefficients(pattern, N, form)
-%{
-idealBPcoefficients(pattern, N, form) computes the ideal beampattern
-coefficients given a desired beampattern, its order N, and the notation 
-used to express the beampattern.
-%}
+%idealBPcoefficients Compute ideal beampattern coefficients for a target pattern
 
 %-------------------------PART I-------------------------------------------
 %COMPUTE BEAMPATTERN COEFFICIENTS USING THE STANDARD COSINE POWER SERIES

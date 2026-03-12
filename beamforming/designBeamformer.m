@@ -1,5 +1,6 @@
 function h = designBeamformer(r_m, psi_m, q_m, theta_m, omega, c, N, b2n, theta_s)
-%designBeamformer  Compute frequency-dependent beamforming weights
+%designBeamformer Compute frequency-dependent beamforming weights
+
 M = numel(r_m);
 nfreq = numel(omega);
 h = zeros(M, nfreq);

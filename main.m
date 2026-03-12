@@ -1,4 +1,5 @@
 %% main.m
+% F. Miotello (federico.miotello@polimi.it) et al. "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements" - IEEE Transactions on Audio, Speech and Language Processing
 
 clear; clc; close all;
 addpath("utils");
@@ -16,25 +17,24 @@ theta = deg2rad(-180:180);                 % Angles [rad]
 db_limit = -50;                            % dB plot limit
 plot_freq_idx = 20;                        % Frequency idx to plot
 
-% Array geometry
+%% Array geometry
 M = 9; max_rad = 0.02; min_sep = 0.008;
 [r_m, psi_m] = randomPosWithSeparation(M, max_rad, min_sep);
 
-% Elements directivity
+%% Element directivities
 q_m = rand(M,1); theta_m = 2*pi*rand(M,1) - pi;
 
-% Desired beampattern
+%% Target beampattern
 N = 1; shape = 'supercardioid'; theta_s = deg2rad(60);
 [~, b2n] = idealBPcoefficients(shape, N, 'harmonic_series');
 
-% Design beamformer weights
+%% Design beamformer
 h = designBeamformer(r_m, psi_m, q_m, theta_m, omega, c, N, b2n, theta_s);
 
-% Compute beampattern metrics
-[BP, WNG, DF] = computeMetrics(h, r_m, psi_m, q_m, theta_m, omega, c, ...
-    theta, theta_s);
+%% Compute metrics
+[BP, WNG, DF] = computeMetrics(h, r_m, psi_m, q_m, theta_m, omega, c, theta, theta_s);
 
-% Plotting
+%% Plot results
 plotArrayGeometry(r_m, psi_m, q_m, theta_m, theta, max_rad);
 plotBeampatterns(BP, b2n, N, theta_s, theta, plot_freq_idx, db_limit);
 plotBeampatternsFrequency(BP, b2n, N, theta_s, theta, freq, db_limit);

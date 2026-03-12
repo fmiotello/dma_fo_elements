@@ -1,4 +1,6 @@
 function plotBeampatterns(BP, b2n, N, theta_s, theta, freq_idx, db_limit)
+%plotBeampatterns Plot the designed and target beampatterns
+
 target_BP = computeTargetBeampattern(b2n, N, theta_s, theta);
 
 % Create polar axes

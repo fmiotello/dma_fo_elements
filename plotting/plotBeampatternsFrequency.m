@@ -1,12 +1,13 @@
 function plotBeampatternsFrequency(BP, b2n, N, theta_s, theta, freq, db_limit)
+%plotBeampatternsFrequency Visualize the beampattern over angle and frequency
 
-% target beampattern in dB and normalize
+% Target beampattern in dB and normalize
 target_BP = computeTargetBeampattern(b2n, N, theta_s, theta);
 target_BP_db = max(20*log10(abs(target_BP)), db_limit);
 min_tdb = min(target_BP_db, [], 'all');
 max_tdb = max(target_BP_db, [], 'all');
 
-% wrap and normalize data
+% Wrap and normalize data
 thetaWrap   = [theta, theta(1)+2*pi];
 BPwrap      = max(20*log10(abs([BP, BP(:,1)])), db_limit);
 BPwrap_ = (BPwrap - min_tdb) ./ (max_tdb - min_tdb);
@@ -66,12 +67,10 @@ for k = 1:numRadialLines
     z_bot  = freq_flipped(end)/1e3;  % z-level for bottom
 
     % Vertical radial lines (top cap)
-    plot3(x_line, y_line, z_top*ones(1,2), ...
-        'Color', [0.85 0.85 0.85], 'LineStyle', '-', 'LineWidth', 0.5, 'HandleVisibility','off');
+    plot3(x_line, y_line, z_top*ones(1,2), 'Color', [0.85 0.85 0.85], 'LineStyle', '-', 'LineWidth', 0.5, 'HandleVisibility','off');
 
     % Vertical radial lines (bottom cap)
-    plot3(x_line, y_line, z_bot*ones(1,2), ...
-        'Color', [0.85 0.85 0.85], 'LineStyle', '-', 'LineWidth', 0.5, 'HandleVisibility','off');
+    plot3(x_line, y_line, z_bot*ones(1,2), 'Color', [0.85 0.85 0.85], 'LineStyle', '-', 'LineWidth', 0.5, 'HandleVisibility','off');
 end
 
 % More concentric rings at intermediate radii
@@ -84,7 +83,7 @@ for r = radii
     plot3(x_ring, y_ring, freq_flipped(end)/1e3*ones(size(t)),'Color',[0.85 0.85 0.85], 'LineStyle', '-', 'LineWidth', 0.5, 'HandleVisibility','off');
 end
 
-% Legend for LaTeX articles
+% Legend
 hLine1 = plot3(NaN,NaN,NaN,'b-','LineWidth',2,  'DisplayName','$\mathcal{B}[\mathbf{h}(\omega),\theta]$');
 hLine2 = plot3(NaN,NaN,NaN,'r--','LineWidth',2,'DisplayName','$\bar{\mathcal{B}}(\mathbf{b}_{2N}, \theta, \theta_s)$');
 legend('show','Location','northwest','Interpreter','latex','FontSize',12)

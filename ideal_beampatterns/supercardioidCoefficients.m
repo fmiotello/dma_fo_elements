@@ -1,7 +1,5 @@
 function [a_N, b_2N] = supercardioidCoefficients(N)
-%% supercardioidCoefficients(N) computes the N+1 coefficients of a Nth order
-% supercardioid. Supercardioid pattern is here defined as the pattern which
-% maximizes the Front-to-Back Ratio (assuming cylindrically isotropic noise field)
+%supercardioidCoefficients Compute the coefficients of an Nth-order supercardioid.
         
 %Compute a_nN Coefficients-------------------------------------------------
 

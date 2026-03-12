@@ -1,5 +1,5 @@
 function [a_N,b_2N] = cardioidCoefficients(N)
-%% cardioidCoefficients(N) computes the N+1 coefficients of a Nth order cardioid.
+%cardioidCoefficients Compute the coefficients of an Nth-order cardioid.
 
 %Compute a_nN Coefficients-------------------------------------------------
 
