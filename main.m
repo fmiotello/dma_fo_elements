@@ -25,7 +25,7 @@ M = 9; max_rad = 0.02; min_sep = 0.008;
 q_m = rand(M,1); theta_m = 2*pi*rand(M,1) - pi;
 
 %% Target beampattern
-N = 1; shape = 'supercardioid'; theta_s = deg2rad(60);
+N = 2; shape = 'hypercardioid'; theta_s = deg2rad(60);
 [~, b2n] = idealBPcoefficients(shape, N, 'harmonic_series');
 
 %% Design beamformer
