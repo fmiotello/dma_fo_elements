@@ -1,8 +1,12 @@
 # On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements
 
-Official MATLAB implementation of the article _"On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements"_, accepted for publication on the **IEEE Transactions on Audio, Speech and Language Processing**.
+Official MATLAB implementation of the article
 
-This repository implements the proposed framework for designing steerable differential beamformers for arbitrary planar arrays of first-order elements. The codebase is intentionally compact and script-driven, with reusable helpers for beamforming, geometry generation, target beampattern construction, and plotting.
+> F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
+
+The article is available in IEEE Xplore (early access): [https://ieeexplore.ieee.org/document/11447415/authors#authors](https://ieeexplore.ieee.org/document/11447415/authors#authors).
+
+This repository implements the proposed framework to design steerable differential beamformers for arbitrary planar arrays of first-order elements. The codebase is compact and organized around two main entry-point scripts, with reusable helpers for beamforming, geometry generation, target beampattern construction, and plotting.
 
 ## Repository overview
 
@@ -21,8 +25,9 @@ Supporting code is grouped as follows:
 ## Requirements
 
 - MATLAB
+- Optimization Toolbox (`fmincon` is needed for `hypercardioid` and `supercardioid` target beampatterns).
 
-The code is self-contained and uses standard MATLAB functionality.
+The code is otherwise self-contained and uses standard MATLAB functionality.
 
 ## Getting started
 
@@ -56,8 +61,8 @@ Geometry-related parameters depend on the specific array generation strategy ado
 
 ## Citation
 
-If you use this repository, please cite the corresponding paper:
+If you use this repository, please cite the corresponding article:
 
 ```text
-F. Miotello et al., "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," accepted for publication in IEEE Transactions on Audio, Speech and Language Processing.
+F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
 ```
