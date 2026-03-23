@@ -8,12 +8,12 @@ addpath("plotting");
 addpath("ideal_beampatterns")
 
 %% Parameters
-c = 343;
-freq = 50:50:4000;
+c = 343;                                    % Speed of sound [m/s]
+freq = 50:50:4000;                          % Frequencies [Hz]
 omega = 2*pi*freq;
-theta = deg2rad(-180:180);
-db_limit = -50;
-plot_freq_idx = 20;
+theta = deg2rad(-180:180);                  % Angles [rad]
+db_limit = -50;                             % dB plot limit
+plot_freq_idx = 20;                         % Frequency idx to plot
 
 n_exp = 100;
 M = 9; max_rad = 0.02; min_sep = 0.008;
