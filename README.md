@@ -4,11 +4,11 @@ Official MATLAB implementation of the article
 
 > F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
 
-The article is available in IEEE Xplore (early access): [https://ieeexplore.ieee.org/document/11447415/authors#authors](https://ieeexplore.ieee.org/document/11447415/authors#authors).
+📝 The article is available in IEEE Xplore (early access): [https://ieeexplore.ieee.org/document/11447415](https://ieeexplore.ieee.org/document/11447415).
 
 This repository implements the proposed framework to design steerable differential beamformers for arbitrary planar arrays of first-order elements. The codebase is compact and organized around two main entry-point scripts, with reusable helpers for beamforming, geometry generation, target beampattern construction, and plotting.
 
-## Repository overview
+## 📁 Repository overview
 
 The main workflow is organized around two entry-point scripts:
 
@@ -22,14 +22,14 @@ Supporting code is grouped as follows:
 - `plotting/`: reusable visualization utilities for array geometry, beampatterns, WNG, and DF.
 - `utils/`: helper functions for generating array geometries and related support routines.
 
-## Requirements
+## ⚙️ Requirements
 
 - MATLAB
 - Optimization Toolbox (`fmincon` is needed for `hypercardioid` and `supercardioid` target beampatterns).
 
 The code is otherwise self-contained and uses standard MATLAB functionality.
 
-## Getting started
+## 🚀 Getting started
 
 From MATLAB, open the repository folder and choose the script that matches the type of experiment you want to run. The two entry points, `main.m` and `main_montecarlo.m`, share the same overall workflow: they define the acoustic and beamforming parameters, generate the array configuration and first-order element characteristics, compute the coefficients of the desired beampattern, design the frequency-dependent beamformer weights, and evaluate the resulting response. The lower-level functionality is delegated to the helper routines in `beamforming/`, `plotting/`, `utils/`, and `ideal_beampatterns/`.
 
@@ -45,7 +45,7 @@ For a statistical analysis over multiple randomized realizations, run:
 main_montecarlo
 ```
 
-## Main parameters
+## 🎛️ Main parameters
 
 The following parameters can be adjusted directly in `main.m` and `main_montecarlo.m`:
 
@@ -59,7 +59,7 @@ The following parameters can be adjusted directly in `main.m` and `main_montecar
 
 Geometry-related parameters depend on the specific array generation strategy adopted in the script. For example, `max_rad` and `min_sep` are relevant for the random circular-area geometry used in the article.
 
-## Citation
+## 📚 Citation
 
 If you use this repository, please cite the corresponding article:
 
