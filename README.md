@@ -2,9 +2,9 @@
 
 Official MATLAB implementation of the article
 
-> F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
+> F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing, vol. 34, pp. 1815-1825, 2026, doi: 10.1109/TASLPRO.2026.3675799.
 
-📝 The article is available in IEEE Xplore (early access): [https://ieeexplore.ieee.org/document/11447415](https://ieeexplore.ieee.org/document/11447415).
+📝 The article is available in IEEE Xplore: [https://ieeexplore.ieee.org/document/11447415](https://ieeexplore.ieee.org/document/11447415).
 
 This repository implements the proposed framework to design steerable differential beamformers for arbitrary planar arrays of first-order elements. The codebase is compact and organized around two main entry-point scripts, with reusable helpers for beamforming, geometry generation, target beampattern construction, and plotting.
 
@@ -64,5 +64,19 @@ Geometry-related parameters depend on the specific array generation strategy ado
 If you use this repository, please cite the corresponding article:
 
 ```text
-F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
+F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing, vol. 34, pp. 1815-1825, 2026, doi: 10.1109/TASLPRO.2026.3675799.
+```
+
+BibTeX:
+
+```bibtex
+@ARTICLE{miotello2026extension,
+  author={Miotello, Federico and Albertini, Davide and Bernardini, Alberto},
+  journal={IEEE Transactions on Audio, Speech and Language Processing},
+  title={On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements},
+  year={2026},
+  volume={34},
+  pages={1815-1825},
+  publisher={IEEE}
+}
 ```
