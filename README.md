@@ -70,7 +70,7 @@ F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential B
 BibTeX:
 
 ```bibtex
-@ARTICLE{miotello2026extension,
+@article{miotello2026extension,
   author={Miotello, Federico and Albertini, Davide and Bernardini, Alberto},
   journal={IEEE Transactions on Audio, Speech and Language Processing},
   title={On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements},

@@ -2,7 +2,7 @@
 % Author: Federico Miotello (Politecnico di Milano)
 % Email: federico.miotello@polimi.it
 % Date: March 2026
-% Reference: F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing.
+% Reference: F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing (doi: 10.1109/TASLPRO.2026.3675799).
 
 clear; clc; close all;
 addpath("utils");
