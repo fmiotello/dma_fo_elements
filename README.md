@@ -4,7 +4,7 @@ Official MATLAB implementation of the article
 
 > F. Miotello, D. Albertini and A. Bernardini, "On the Extension of Differential Beamforming Theory to Arbitrary Planar Arrays of First-Order Elements," in IEEE Transactions on Audio, Speech and Language Processing, vol. 34, pp. 1815-1825, 2026, doi: 10.1109/TASLPRO.2026.3675799.
 
-📝 The article is available in IEEE Xplore: [https://ieeexplore.ieee.org/document/11447415](https://ieeexplore.ieee.org/document/11447415).
+📝 The article is available in open access on IEEE Xplore: [https://ieeexplore.ieee.org/document/11447415](https://ieeexplore.ieee.org/document/11447415).
 
 This repository implements the proposed framework to design steerable differential beamformers for arbitrary planar arrays of first-order elements. The codebase is compact and organized around two main entry-point scripts, with reusable helpers for beamforming, geometry generation, target beampattern construction, and plotting.
 
